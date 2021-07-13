@@ -173,6 +173,11 @@ FOUNDATION_EXTERN const double kCKMarginFactorWorld;
  */
 - (void)updateClustersIfNeeded;
 
+/**
+ Gives back annotations in given MKMapRect.
+ */
+- (NSArray<id<MKAnnotation>> *)annotationsInRect:(MKMapRect)rect;
+
 @end
 
 /**

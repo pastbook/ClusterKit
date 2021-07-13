@@ -83,6 +83,10 @@ BOOL CLLocationCoordinateEqual(CLLocationCoordinate2D coordinate1, CLLocationCoo
     }
 }
 
+- (NSArray<id<MKAnnotation>> *)annotationsInRect:(MKMapRect)rect {
+    return self.tree ? [self.tree annotationsInRect:rect] : @[];
+}
+
 - (void)updateClusters {
     if (!self.map) return;
     
